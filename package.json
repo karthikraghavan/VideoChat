@@ -1,0 +1,20 @@
+{
+  "name": "videochat",
+  "version": "1.0.0",
+  "description": "video chat application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karthikraghavan/Videochat.git"
+  },
+  "author": "KR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karthikraghavan/Videochat/issues"
+  },
+  "homepage": "https://github.com/karthikraghavan/Videochat#readme"
+}
