@@ -1,0 +1,56 @@
+<html>
+<head>
+<title> Video app sample </title>
+<meta http-eqiv="content-type" content="text/html: charset=utf-8"/>
+</head>
+<body>
+<script type="text/javascript">
+var videoObj;
+  function onVidyoClientLoaded(status) {
+   console.log("Connection status " + status.state);
+   if(status.state == "READY")
+   { 
+     VC.CreateVidyoConnector({
+     viewId: "renderer",                           
+     viewStyle: "VIDYO_CONNECTORVIEWSTYLE_Default", 
+     remoteParticipants: 15,                        
+     logFileFilter: "warning all@VidyoConnector info@VidyoClient",
+     logFileName:"",
+     userData:""
+   }).then(function(VC){
+   console.log("Connection Success");
+   videoObj=VC;
+   
+}).catch(function(error){
+
+});   
+   }
+}
+
+function joinCall(){
+videoObj.Connect({
+host:"prod.vidyo.io",
+token:"cHJvdmlzaW9uAEJPQVVzZXJEZW1vQDM0OTM5Yy52aWR5by5pbwA2MzY4NDUyNzI1OAAAMTI4YTczN2Y2N2UzNTliMTYzNWU0NGU2NDFjZGNiYzgzZTg3YmEyZWI3MjUwNTM2MGUxMWE3YWRhNjIzMTEwYmMzNGEzOGI1MzEzMjQyYjQxMDk5MWIzYzA5Zjk0NTJm",
+displayName:"BOA",
+resourceId:"BOARoom",
+onSuccess:function(){
+console.log("Session started");
+},
+onFailure:function(reason){
+console.log("Connection not established");
+
+},
+onDisconnected:function(reason){
+console.log("disconnected" + reason)
+}
+})
+
+}
+
+</script>
+<script src="https://static.vidyo.io/4.1.20.3/javascript/VidyoClient/VidyoClient.js?onload=onVidyoClientLoaded"></script>
+<h3>Hello</h3>
+<button onclick="joinCall()">Connect</button>
+<div id="renderer"></div>
+</body>
+</html>

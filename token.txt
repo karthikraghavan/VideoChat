@@ -1,0 +1,11 @@
+C:\Users\TCS\Downloads\generateToken-c-sharp-master\generateToken-c-sharp-master\GenerateToken\GenerateToken\bin\Debug
+
+
+
+
+GenerateToken.exe --key=73122d4ae061402696474d82e922d1b6 --appID=34939c.vidyo.io --userName=BOAUserDemo --expiresInSecs=10000
+
+
+https://static.vidyo.io/4.1.20.3/connector/VidyoConnector.html?host=prod.vidyo.io&token=SomeToken&resourceId=BOARoom
+
+cHJvdmlzaW9uAEJPQVVzZXJEZW1vQDM0OTM5Yy52aWR5by5pbwA2MzY4NDUyNzI1OAAAMTI4YTczN2Y2N2UzNTliMTYzNWU0NGU2NDFjZGNiYzgzZTg3YmEyZWI3MjUwNTM2MGUxMWE3YWRhNjIzMTEwYmMzNGEzOGI1MzEzMjQyYjQxMDk5MWIzYzA5Zjk0NTJm
