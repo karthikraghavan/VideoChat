@@ -7,7 +7,7 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 // Render page
-fs.readFile('./index.html', function (err, html) {
+fs.readFile('index.html', function (err, html) {
     if (err) {
         throw err;
     }
